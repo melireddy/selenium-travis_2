@@ -1,0 +1,23 @@
+{
+  "name": "selenium-travis",
+  "version": "1.0.0",
+  "description": "Selenium IDE, selenium-side-runner, and Travis CI",
+  "main": "index.js",
+  "scripts": {
+    "test": "python3 run_python_too.py & node index.js & selenium-side-runner -c \"goog:chromeOptions.args=[--headless,--nogpu] browserName=chrome\" test.side; # killall -9 node; # pkill -9 -f run_python_too.py;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hchiam/selenium-travis.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hchiam/selenium-travis/issues"
+  },
+  "homepage": "https://github.com/hchiam/selenium-travis#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
